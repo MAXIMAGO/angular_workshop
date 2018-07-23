@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./member-box.component.css']
 })
 export class MemberBoxComponent implements OnInit {
+  public cursor: { x: number, y: number };
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  updateCursor(e: MouseEvent) {
+    this.cursor = { x: e.x, y: e.y };
   }
 
 }
