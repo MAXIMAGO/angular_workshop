@@ -1,5 +1,6 @@
 import { IMember } from './../../models/member.model';
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class MemberService {
 
   constructor() {}
 
-  public getMembers(): IMember[] {
-    return this._members;
+  public getMembers(): Observable<IMember[]> {
+    return of(this._members);
   }
 }

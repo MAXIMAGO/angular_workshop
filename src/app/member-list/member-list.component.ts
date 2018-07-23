@@ -12,7 +12,7 @@ export class MemberListComponent implements OnInit {
   constructor(private _memberService: MemberService) {}
 
   ngOnInit() {
-    this.members = this._memberService.getMembers();
+    this._memberService.getMembers().subscribe(members => this.members = members);
   }
 
   public showMember(member: IMember) {
