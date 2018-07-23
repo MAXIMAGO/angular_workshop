@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MemberBoxComponent implements OnInit {
   @Input() public member: IMember;
-  public cursor: { x: number, y: number };
+  public cursor: { x: number, y: number } = { x: 0, y: 0 };
 
   constructor() { }
 
