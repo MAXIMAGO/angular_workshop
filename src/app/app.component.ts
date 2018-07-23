@@ -7,13 +7,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-  public currentMember: IMember = {
-    name: 'Owusu-Sekyere',
-    firstname: 'Kingsley'
-  };
-
-  public showMember(member: IMember) {
-    console.log(member);
-  }
 }

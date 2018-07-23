@@ -1,7 +1,1 @@
-<h2 class="member__header" (click)="onHeaderClick($event)">{{member.name}}, {{member.firstname}}</h2>
-<div style="height:200px; border:1px solid black; background-color:lightblue; cursor:crosshair" (mousemove)="updateCursor($event)">
-</div>
-<div>
-  <span>x: {{cursor.x}}</span>
-  <span>y: {{cursor.y}}</span>
-</div>
+<h2 *ngIf="member" class="member__header" (click)="onHeaderClick($event)">{{member.name}}, {{member.firstname}}</h2>
