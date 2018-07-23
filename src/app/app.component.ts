@@ -12,4 +12,8 @@ export class AppComponent {
     name: 'Owusu-Sekyere',
     firstname: 'Kingsley'
   };
+
+  public showMember(member: IMember) {
+    console.log(member);
+  }
 }

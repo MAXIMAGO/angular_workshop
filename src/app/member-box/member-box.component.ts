@@ -1,5 +1,5 @@
 import { IMember } from './../models/member.model';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'th-member-box',
@@ -10,13 +10,19 @@ export class MemberBoxComponent implements OnInit {
   @Input() public member: IMember;
   public cursor: { x: number, y: number };
 
+  @Output() public headerClick = new EventEmitter<IMember>();
+
   constructor() { }
 
   ngOnInit() {
   }
 
-  updateCursor(e: MouseEvent) {
+  public updateCursor(e: MouseEvent) {
     this.cursor = { x: e.x, y: e.y };
+  }
+
+  public onHeaderClick(e: MouseEvent) {
+    this.headerClick.emit(this.member);
   }
 
 }

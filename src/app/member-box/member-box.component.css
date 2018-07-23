@@ -3,4 +3,10 @@
   background: darkblue;
   padding: 8px;
   border-radius: 8px;
+  cursor: pointer;
+}
+
+.member__header:hover {
+  background: orange;
+  color: darkblue;
 }
