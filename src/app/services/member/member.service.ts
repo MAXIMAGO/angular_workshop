@@ -1,20 +1,27 @@
 import { IMember } from './../../models/member.model';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { catchError } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MemberService {
-  private _members: IMember[] = [
-    { firstname: 'Kingsley', name: 'Owusu-Sekyere' },
-    { firstname: 'Matthias', name: 'Blex' },
-    { firstname: 'Martin', name: 'Kaniut' }
-  ];
-
-  constructor() {}
+  constructor(private _http: HttpClient) {}
 
   public getMembers(): Observable<IMember[]> {
-    return of(this._members);
+    return this._http.get<IMember[]>(environment.api.members.get)
+      .pipe(catchError(this.handleError('getMembers', [])));
+  }
+
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.error(`${operation} failed: ${error.message}`, error);
+      return of(result as T);
+    };
   }
 }
+
+
