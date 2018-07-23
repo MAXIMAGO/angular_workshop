@@ -1,3 +1,4 @@
+import { MemberService } from './../services/member/member.service';
 import { IMember } from './../models/member.model';
 import { Component, OnInit } from '@angular/core';
 
@@ -7,15 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./member-list.component.css']
 })
 export class MemberListComponent implements OnInit {
-  public members: IMember[] = [
-    { firstname: 'Kingsley', name: 'Owusu-Sekyere' },
-    { firstname: 'Matthias', name: 'Blex' },
-    { firstname: 'Martin', name: 'Kaniut' }
-  ];
-
+  public members: IMember[];
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    const memberService = new MemberService();
+    this.members = memberService.getMembers();
+  }
 
   public showMember(member: IMember) {
     console.log(member);
