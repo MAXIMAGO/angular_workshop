@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { IMember } from './../models/member.model';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'th-member-box',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./member-box.component.css']
 })
 export class MemberBoxComponent implements OnInit {
+  @Input() public member: IMember;
   public cursor: { x: number, y: number };
 
   constructor() { }

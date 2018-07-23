@@ -1,3 +1,4 @@
+import { IMember } from './models/member.model';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  public currentMember: IMember = {
+    name: 'Owusu-Sekyere',
+    firstname: 'Kingsley'
+  };
 }
