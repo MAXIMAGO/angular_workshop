@@ -9,11 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MemberListComponent implements OnInit {
   public members: IMember[];
-  constructor(private _memberService: MemberService) {}
-
-  ngOnInit() {
+  constructor(private _memberService: MemberService) {
     this.members = this._memberService.getMembers();
   }
+
+  ngOnInit() {}
 
   public showMember(member: IMember) {
     console.log(member);
