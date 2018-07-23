@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./member-box.component.css']
 })
 export class MemberBoxComponent implements OnInit {
-  public cursor: { x: number, y: number };
+  public cursor: { x: number, y: number } = { x: 0, y: 0 };
 
   constructor() { }
 
