@@ -1,3 +1,4 @@
+import { AppRoutingModule } from './app.routing';
 import { IN_MEMORY_DB } from './storage/in-memory.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -16,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     HttpClientModule,
+    AppRoutingModule,
     IN_MEMORY_DB
   ],
   providers: [],
