@@ -1,9 +1,11 @@
-<h3>Steckbrief anpassen</h3>
-<form #form="ngForm" *ngIf="!!member">
-  <p>
-    <input type="text" required minlength="2" [(ngModel)]="member.name" name="name" #name="ngModel">
+<form class="edit__form" #form="ngForm" (ngSubmit)="save(form)" *ngIf="!!member">
+    <h3>Steckbrief anpassen</h3>
+    <p>
+    <input type="text" required minlength="2" [(ngModel)]="member.name" name="lastname" #name="ngModel">
   </p>
   <p>
     <input type="text" required maxlength=10 [(ngModel)]="member.firstname" name="firstname" #firstname="ngModel">
   </p>
+  <div class="edit__error" [hidden]="form.valid">Angaben sind nicht korrekt</div>
+  <button type="submit" [disabled]="!form.valid || !form.dirty">Speichern</button>
 </form>

@@ -2,6 +2,7 @@ import { MemberService } from './../services/member/member.service';
 import { ActivatedRoute } from '@angular/router';
 import { IMember } from './../models/member.model';
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '../../../../node_modules/@angular/forms';
 
 @Component({
   selector: 'th-member-edit',
@@ -10,7 +11,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MemberEditComponent implements OnInit {
   public member: IMember;
-
 
   constructor(private activatedRoute: ActivatedRoute, private memberService: MemberService) {}
 
@@ -21,4 +21,12 @@ export class MemberEditComponent implements OnInit {
     });
   }
 
+  public save(form: FormGroup) {
+    console.log(form.value);
+    // save on api
+    // ...
+    // on save success
+    form.reset(form.value);
+
+  }
 }

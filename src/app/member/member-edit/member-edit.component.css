@@ -5,3 +5,16 @@ input.ng-invalid.ng-touched {
 input.ng-touched.ng-valid {
   background: lightgreen;
 }
+
+.edit__form{
+  border: 1px solid grey;
+  padding: 20px;
+  background: lightblue;
+}
+
+.edit__error{
+  color: red;
+  font-weight: bold;
+  font-size: larger;
+  margin: 8px;
+}
