@@ -1,4 +1,3 @@
-import { IMember } from './models/member.model';
 import { Component } from '@angular/core';
 
 @Component({
