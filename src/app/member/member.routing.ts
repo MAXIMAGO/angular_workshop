@@ -1,3 +1,4 @@
+import { MemberListGuard } from './guards/member-list.guard';
 import { MemberComponent } from './member/member.component';
 import { MemberDetailsComponent } from './member-details/member-details.component';
 import { MemberListComponent } from './member-list/member-list.component';
@@ -11,7 +12,8 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        component: MemberListComponent
+        component: MemberListComponent,
+        canActivate: [MemberListGuard]
       },
       {
         path: ':id',
