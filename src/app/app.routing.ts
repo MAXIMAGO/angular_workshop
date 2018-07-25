@@ -1,5 +1,4 @@
-import { MemberDetailsComponent } from './member/member-details/member-details.component';
-import { MemberListComponent } from './member/member-list/member-list.component';
+import { MemberModule } from './member/member.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -8,14 +7,6 @@ export const routes: Routes = [
     path: '',
     redirectTo: '/members',
     pathMatch: 'full'
-  },
-  {
-    path: 'members',
-    component: MemberListComponent
-  },
-  {
-    path: 'members/:id',
-    component: MemberDetailsComponent
   }
 ];
 
