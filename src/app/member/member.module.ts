@@ -5,17 +5,21 @@ import { MemberBoxComponent } from './member-box/member-box.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MemberComponent } from './member/member.component';
+import { MemberEditComponent } from './member-edit/member-edit.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
-    memberRouting
+    memberRouting,
+    FormsModule
   ],
   declarations: [
     MemberBoxComponent,
     MemberListComponent,
     MemberDetailsComponent,
-    MemberComponent
+    MemberComponent,
+    MemberEditComponent
   ]
 })
 export class MemberModule { }

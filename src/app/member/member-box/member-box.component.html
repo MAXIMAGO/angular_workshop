@@ -1,1 +1,4 @@
-<h2 *ngIf="member" class="member__header" (click)="onHeaderClick($event)">{{member.name}}, {{member.firstname}}</h2>
+<div class="member__header" (click)="onHeaderClick($event)">
+  <h2 class="member__title" *ngIf="member" >{{member.name}}, {{member.firstname}}</h2>
+  <button class="member__edit" (click)="onEditClick($event)">edit</button>
+</div>

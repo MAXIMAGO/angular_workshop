@@ -1,2 +1,2 @@
-<th-member-box *ngFor="let member of members" [member]="member" (headerClick)="showMember($event)"></th-member-box>
+<th-member-box *ngFor="let member of members" [member]="member" (headerClick)="showMember($event)" (editClick)="editMember($event)"></th-member-box>
 <router-outlet></router-outlet>

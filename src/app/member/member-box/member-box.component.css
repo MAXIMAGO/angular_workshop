@@ -1,12 +1,36 @@
 .member__header{
   color: orange;
   background: darkblue;
-  padding: 8px;
   border-radius: 8px;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+}
+
+.member__title{
+  margin: 10px;
+  flex:1;
 }
 
 .member__header:hover {
   background: orange;
   color: darkblue;
+}
+
+.member__edit{
+  border-radius: 0 8px 8px 0;
+  color: darkblue;
+  background: lightblue;
+  border:none;
+  cursor:pointer;
+}
+
+.member__edit:hover{
+  color: orange;
+  background: darkblue;
+}
+
+.member__edit:active{
+  color: darkorange;
+  background: blue;
 }

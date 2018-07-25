@@ -1,9 +1,9 @@
+import { MemberEditComponent } from './member-edit/member-edit.component';
 import { MemberListGuard } from './guards/member-list.guard';
 import { MemberComponent } from './member/member.component';
 import { MemberDetailsComponent } from './member-details/member-details.component';
 import { MemberListComponent } from './member-list/member-list.component';
 import { RouterModule, Routes } from '@angular/router';
-import { ModuleWithProviders } from '@angular/compiler/src/core';
 
 export const routes: Routes = [
   {
@@ -19,6 +19,10 @@ export const routes: Routes = [
       {
         path: ':id',
         component: MemberDetailsComponent
+      },
+      {
+        path: 'edit/:id',
+        component: MemberEditComponent
       }
     ]
   }

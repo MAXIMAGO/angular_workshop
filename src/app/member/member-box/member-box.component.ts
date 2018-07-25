@@ -11,6 +11,7 @@ export class MemberBoxComponent implements OnInit {
   public cursor: { x: number, y: number } = { x: 0, y: 0 };
 
   @Output() public headerClick = new EventEmitter<IMember>();
+  @Output() public editClick = new EventEmitter<IMember>();
 
   constructor() { }
 
@@ -23,6 +24,11 @@ export class MemberBoxComponent implements OnInit {
 
   public onHeaderClick(e: MouseEvent) {
     this.headerClick.emit(this.member);
+  }
+
+  public onEditClick(e: MouseEvent) {
+    e.stopPropagation();
+    this.editClick.emit(this.member);
   }
 
 }

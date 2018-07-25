@@ -1,0 +1,9 @@
+<h3>Steckbrief anpassen</h3>
+<form #form="ngForm" *ngIf="!!member">
+  <p>
+    <input type="text" required minlength="2" [(ngModel)]="member.name" name="name" #name="ngModel">
+  </p>
+  <p>
+    <input type="text" required maxlength=10 [(ngModel)]="member.firstname" name="firstname" #firstname="ngModel">
+  </p>
+</form>
