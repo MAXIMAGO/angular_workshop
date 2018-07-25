@@ -6,7 +6,7 @@ import { ModuleWithProviders } from '@angular/compiler/src/core';
 
 export const routes: Routes = [
   {
-    path: 'members',
+    path: '',
     component: MemberComponent,
     children: [
       {
