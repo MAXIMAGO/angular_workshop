@@ -13,7 +13,8 @@ export const routes: Routes = [
       {
         path: '',
         component: MemberListComponent,
-        canActivate: [MemberListGuard]
+        canActivate: [MemberListGuard],
+        canDeactivate: [MemberListGuard]
       },
       {
         path: ':id',
