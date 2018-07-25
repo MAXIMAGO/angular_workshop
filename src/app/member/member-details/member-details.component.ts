@@ -1,5 +1,5 @@
-import { IMember } from './../models/member.model';
-import { MemberService } from './../services/member/member.service';
+import { IMember } from '../models/member.model';
+import { MemberService } from '../services/member/member.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { filter } from 'rxjs/operators';

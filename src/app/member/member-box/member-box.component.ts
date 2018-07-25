@@ -1,4 +1,4 @@
-import { IMember } from './../models/member.model';
+import { IMember } from '../models/member.model';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({

@@ -1,5 +1,5 @@
-import { MemberDetailsComponent } from './member-details/member-details.component';
-import { MemberListComponent } from './member-list/member-list.component';
+import { MemberDetailsComponent } from './member/member-details/member-details.component';
+import { MemberListComponent } from './member/member-list/member-list.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
