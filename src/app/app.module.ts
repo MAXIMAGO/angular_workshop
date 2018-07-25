@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { MemberBoxComponent } from './member-box/member-box.component';
 import { MemberListComponent } from './member-list/member-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MemberDetailsComponent } from './member-details/member-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MemberBoxComponent,
-    MemberListComponent
+    MemberListComponent,
+    MemberDetailsComponent
   ],
   imports: [
     BrowserModule,
