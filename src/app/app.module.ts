@@ -1,4 +1,3 @@
-import { MemberModule } from './member/member.module';
 import { AppRoutingModule } from './app.routing';
 import { IN_MEMORY_DB } from './storage/in-memory.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,8 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    IN_MEMORY_DB,
-    MemberModule
+    IN_MEMORY_DB
   ],
   providers: [],
   bootstrap: [AppComponent]

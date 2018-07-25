@@ -1,5 +1,3 @@
-import { MemberDetailsComponent } from './member/member-details/member-details.component';
-import { MemberListComponent } from './member/member-list/member-list.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -11,11 +9,7 @@ export const routes: Routes = [
   },
   {
     path: 'members',
-    component: MemberListComponent
-  },
-  {
-    path: 'members/:id',
-    component: MemberDetailsComponent
+    loadChildren: './member/member.module#MemberModule'
   }
 ];
 

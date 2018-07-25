@@ -1,6 +1,7 @@
 import { MemberService } from '../services/member/member.service';
 import { IMember } from '../models/member.model';
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'th-member-list',
@@ -9,13 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MemberListComponent implements OnInit {
   public members: IMember[];
-  constructor(private _memberService: MemberService) {}
+  constructor(private _memberService: MemberService, private _router: Router, private _activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {
     this._memberService.getMembers().subscribe(members => (this.members = members));
   }
 
   public showMember(member: IMember) {
-    console.log(member);
+    this._router.navigate([member.id], {relativeTo: this._activatedRoute});
   }
 }
