@@ -1,3 +1,4 @@
+import { MemberService } from './../services/member/member.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 export class NewMemberComponent implements OnInit {
   public member: FormGroup;
 
-  constructor(fb: FormBuilder, private router: Router) {
+  constructor(fb: FormBuilder, private _router: Router, private _memberService: MemberService) {
     this.member = fb.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
       firstname: ['', [Validators.required, Validators.maxLength(10)]]
@@ -30,8 +31,9 @@ export class NewMemberComponent implements OnInit {
   }
 
   public onSave() {
-    console.log(this.member.value);
-    this.member.reset();
-    this.router.navigate(['members']);
+    this._memberService.createMember(this.member.value).subscribe(() => {
+      this.member.reset();
+      this._router.navigate(['members']);
+    });
   }
 }

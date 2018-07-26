@@ -7,7 +7,8 @@ export const environment = {
 
   api: {
     members: {
-      get: 'api/members'
+      get: 'api/members',
+      put: 'api/members'
     }
   }
 };

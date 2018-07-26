@@ -9,11 +9,17 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class MemberService {
+  private _nextId = 4;
+
   constructor(private _http: HttpClient) {}
 
   public getMembers(): Observable<IMember[]> {
-    return this._http.get<IMember[]>(environment.api.members.get)
-      .pipe(catchError(this.handleError('getMembers', [])));
+    return this._http.get<IMember[]>(environment.api.members.get).pipe(catchError(this.handleError('getMembers', [])));
+  }
+
+  public createMember(data: IMember): Observable<IMember> {
+    data.id = this.getId();
+    return this._http.put<IMember>(`${environment.api.members.put}/${data.id}`, data);
   }
 
   private handleError<T>(operation = 'operation', result?: T) {
@@ -22,6 +28,8 @@ export class MemberService {
       return of(result as T);
     };
   }
+
+  private getId(): string {
+    return (this._nextId++).toString();
+  }
 }
-
-
