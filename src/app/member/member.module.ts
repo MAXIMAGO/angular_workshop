@@ -8,6 +8,8 @@ import { MemberComponent } from './member/member.component';
 import { MemberEditComponent } from './member-edit/member-edit.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewMemberComponent } from './new-member/new-member.component';
+import { TooltipDirective } from './tooltip/tooltip.directive';
+import { TooltipComponent } from './tooltip/tooltip.component';
 
 @NgModule({
   imports: [
@@ -22,7 +24,12 @@ import { NewMemberComponent } from './new-member/new-member.component';
     MemberDetailsComponent,
     MemberComponent,
     MemberEditComponent,
-    NewMemberComponent
+    NewMemberComponent,
+    TooltipDirective,
+    TooltipComponent
+  ],
+  entryComponents: [
+    TooltipComponent
   ]
 })
 export class MemberModule { }

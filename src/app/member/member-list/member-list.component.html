@@ -1,3 +1,3 @@
 <button class="list__new" (click)="newMember()">Neues Teammitglied</button>
 <div>
-<th-member-box *ngFor="let member of members" [member]="member" (headerClick)="showMember($event)" (editClick)="editMember($event)"></th-member-box>
+<th-member-box *ngFor="let member of members" [thTooltip]="member|json" [member]="member" (headerClick)="showMember($event)" (editClick)="editMember($event)"></th-member-box>
