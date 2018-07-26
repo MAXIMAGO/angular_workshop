@@ -23,4 +23,8 @@ export class MemberListComponent implements OnInit {
   public editMember(member: IMember) {
     this._router.navigate(['edit', member.id], { relativeTo: this._activatedRoute });
   }
+
+  public newMember() {
+    this._router.navigate(['new'], { relativeTo: this._activatedRoute });
+  }
 }

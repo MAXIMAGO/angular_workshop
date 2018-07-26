@@ -1,0 +1,11 @@
+<form class="new__form" [formGroup]="member" (ngSubmit)="onSave()">
+  <h3>Neues Teammitglied anlegen</h3>
+  <p>
+    <input type="text" formControlName="name">
+  </p>
+  <p>
+    <input type="text" formControlName="firstname">
+  </p>
+  <div class="new__form__error" [hidden]="member.valid" [innerHTML]=getErrorMessage()></div>
+  <button type="submit" [disabled]="!member.valid">Anlegen</button>
+</form>

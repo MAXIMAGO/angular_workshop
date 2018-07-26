@@ -1,8 +1,8 @@
-import { MemberService } from './../services/member/member.service';
+import { MemberService } from '../services/member/member.service';
 import { ActivatedRoute } from '@angular/router';
-import { IMember } from './../models/member.model';
+import { IMember } from '../models/member.model';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '../../../../node_modules/@angular/forms';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'th-member-edit',

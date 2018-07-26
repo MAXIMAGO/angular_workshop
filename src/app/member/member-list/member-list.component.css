@@ -1,0 +1,17 @@
+.list__new{
+  color: darkblue;
+  background: lightblue;
+  cursor:pointer;
+  padding: 8px;
+  font-size: larger;
+}
+
+.list__new:hover{
+  color: orange;
+  background: darkblue;
+}
+
+.list__new:active{
+  color: darkorange;
+  background: blue;
+}

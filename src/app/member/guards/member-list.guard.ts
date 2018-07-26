@@ -1,4 +1,4 @@
-import { MemberListComponent } from './../member-list/member-list.component';
+import { MemberListComponent } from '../member-list/member-list.component';
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, CanDeactivate } from '@angular/router';
 import { Observable } from 'rxjs';

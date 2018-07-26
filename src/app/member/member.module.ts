@@ -6,20 +6,23 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MemberComponent } from './member/member.component';
 import { MemberEditComponent } from './member-edit/member-edit.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NewMemberComponent } from './new-member/new-member.component';
 
 @NgModule({
   imports: [
     CommonModule,
     memberRouting,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
     MemberBoxComponent,
     MemberListComponent,
     MemberDetailsComponent,
     MemberComponent,
-    MemberEditComponent
+    MemberEditComponent,
+    NewMemberComponent
   ]
 })
 export class MemberModule { }
