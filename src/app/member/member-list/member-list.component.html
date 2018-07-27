@@ -1,3 +1,4 @@
-<button class="list__new" (click)="newMember()">Neues Teammitglied</button>
-<div>
-<th-member-box *ngFor="let member of members" [member]="member" (headerClick)="showMember($event)" (editClick)="editMember($event)"></th-member-box>
+<button mat-raised-button color="accent" (click)="newMember()">Neues Teammitglied</button>
+<mat-list>
+    <th-member-box class="list__item" *ngFor="let member of members" [member]="member" (headerClick)="showMember($event)" (editClick)="editMember($event)"></th-member-box>
+</mat-list>

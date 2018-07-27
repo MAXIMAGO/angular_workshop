@@ -1,11 +1,10 @@
+<mat-card-subtitle>Neues Teammitglied anlegen</mat-card-subtitle>
 <form class="new__form" [formGroup]="member" (ngSubmit)="onSave()">
-  <h3>Neues Teammitglied anlegen</h3>
-  <p>
-    <input type="text" formControlName="name">
-  </p>
-  <p>
-    <input type="text" formControlName="firstname">
-  </p>
-  <div class="new__form__error" [hidden]="member.valid" [innerHTML]=getErrorMessage()></div>
-  <button type="submit" [disabled]="!member.valid">Anlegen</button>
+  <mat-form-field>
+    <input matInput placeholder="Nachname" type="text" formControlName="name">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Vorname" type="text" formControlName="firstname">
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit" [disabled]="!member.valid">Anlegen</button>
 </form>

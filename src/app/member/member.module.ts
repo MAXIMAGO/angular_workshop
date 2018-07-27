@@ -1,3 +1,4 @@
+import { MaterialModule } from './../material/material.module';
 import { memberRouting } from './member.routing';
 import { MemberDetailsComponent } from './member-details/member-details.component';
 import { MemberListComponent } from './member-list/member-list.component';
@@ -16,7 +17,8 @@ import { TooltipModule } from '../tooltip/tooltip.module';
     memberRouting,
     FormsModule,
     ReactiveFormsModule,
-    TooltipModule
+    TooltipModule,
+    MaterialModule
   ],
   declarations: [
     MemberBoxComponent,

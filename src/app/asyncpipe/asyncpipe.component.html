@@ -1,6 +1,4 @@
-<p>
-  {{onClick| async | shout: true}}
-</p>
-<p>
-  {{onClick| async | shout}}
-</p>
+<mat-chip-list [matBadge]="count" matBadgePosition="above after">
+    <mat-chip >{{onClick| async | shout: true}}</mat-chip>
+    <mat-chip color="warn">{{onClick| async | shout}}</mat-chip>
+</mat-chip-list>

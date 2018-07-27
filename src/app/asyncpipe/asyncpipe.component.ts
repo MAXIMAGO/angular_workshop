@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { fromEvent } from '../../../node_modules/rxjs';
+import { fromEvent, Observable } from '../../../node_modules/rxjs';
 import { map } from '../../../node_modules/rxjs/operators';
 
 @Component({
@@ -8,9 +8,12 @@ import { map } from '../../../node_modules/rxjs/operators';
   styleUrls: ['./asyncpipe.component.css']
 })
 export class AsyncpipeComponent implements OnInit {
-  public onClick = fromEvent(document, 'click').pipe(map((e: MouseEvent) => `Klick {x:${e.x}, y:${e.y}}`));
+  public onClick: Observable<string> = fromEvent(document, 'click').pipe(map((e: MouseEvent) => `Klick {x:${e.x}, y:${e.y}}`));
+  public count = 0;
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.onClick.subscribe(() => this.count++);
+  }
 }
