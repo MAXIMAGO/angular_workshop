@@ -8,15 +8,15 @@ import { MemberComponent } from './member/member.component';
 import { MemberEditComponent } from './member-edit/member-edit.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewMemberComponent } from './new-member/new-member.component';
-import { TooltipDirective } from './tooltip/tooltip.directive';
-import { TooltipComponent } from './tooltip/tooltip.component';
+import { TooltipModule } from '../tooltip/tooltip.module';
 
 @NgModule({
   imports: [
     CommonModule,
     memberRouting,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TooltipModule
   ],
   declarations: [
     MemberBoxComponent,
@@ -25,11 +25,6 @@ import { TooltipComponent } from './tooltip/tooltip.component';
     MemberComponent,
     MemberEditComponent,
     NewMemberComponent,
-    TooltipDirective,
-    TooltipComponent
   ],
-  entryComponents: [
-    TooltipComponent
-  ]
 })
 export class MemberModule { }

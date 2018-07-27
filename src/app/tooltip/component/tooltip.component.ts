@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef, Inject, HostListener } from '@angular/core';
-import { IToolTipConfig } from './tooltip-config.interface';
+import { IToolTipConfig } from '../tooltip-config.interface';
 
 @Component({
   selector: 'th-tooltip',
@@ -22,11 +22,10 @@ export class TooltipComponent implements OnInit {
   }
 
   private positionTooltip() {
-    const hostRect = this._config.host.getBoundingClientRect();
     const tooltipRect = this._tooltipContainer.nativeElement.getBoundingClientRect();
     this.position = {
-      top: `${hostRect.top - tooltipRect.height}px`,
-      left: `${hostRect.left + (hostRect.width / 2) - (tooltipRect.width / 2)}px`
+      top: `${this._config.position.y - tooltipRect.height}px`,
+      left: `${Math.max(0, this._config.position.x - (tooltipRect.width / 2))}px`
     };
   }
 }

@@ -1,4 +1,4 @@
 <div class="member__header" (click)="onHeaderClick($event)">
-  <h2 class="member__title" *ngIf="member" >{{member.name}}, {{member.firstname}}</h2>
-  <button class="member__edit" (click)="onEditClick($event)">edit</button>
+  <h2  [thTooltip]="member|json" class="member__title" *ngIf="member" >{{member.name}}, {{member.firstname}}</h2>
+  <button thTooltip="Mitarbeiter bearbeiten" thTooltipDelay="1000"  class="member__edit" (click)="onEditClick($event)">edit</button>
 </div>
