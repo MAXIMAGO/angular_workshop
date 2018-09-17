@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="de" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="member_edit" datatype="html">
+        <source>Bearbeiten</source>
+        <target>Edit</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/member/member-box/member-box.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">edit a member</note>
+        <note priority="1" from="meaning">button content</note>
+      </trans-unit>
+      <trans-unit id="27ad2d5546e6c945a078abafd3b967cbc42cd2dc" datatype="html">
+        <source>Mitarbeiter bearbeiten</source>
+        <target>Edit member</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/member/member-box/member-box.component.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">toolip for editing a member</note>
+        <note priority="1" from="meaning">button tooltip</note>
+      </trans-unit>
+      <trans-unit id="2a4cdfddb8bd13eaf814be8e1b63c536ac6dd758" datatype="html">
+        <source>{VAR_PLURAL, plural, =0 {Keine Mitglieder} =1 {Ein Mitglied} =2 {Ein Mitglieder Duo} other {<x id="INTERPOLATION" equiv-text="{{members.length}}"/> Mitglieder} }</source>
+        <target>{VAR_PLURAL, plural, =0 {No members} =1 {A member} =2 {A duo of members} other {<x id="INTERPOLATION" equiv-text="{{members.length}}"/> members} }</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/member/member-list/member-list.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c85ee15c092e97d8e9f09a5d38241f53895e2869" datatype="html">
+        <source>
+          <x id="ICU" equiv-text="{member.name, select, Owusu-Sekyere {...} other {...}}"/>
+        </source>
+        <target>
+          <x id="ICU" equiv-text="{member.name, select, Owusu-Sekyere {...} other {...}}"/>
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/member/member-details/member-details.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1b7615f1655ef361c3494254a0cb1a34627a76ed" datatype="html">
+        <source>{VAR_SELECT, select, Owusu-Sekyere {This is a special guy} other {Here we can view plenty of member details ;)} }</source>
+        <target>{VAR_SELECT, select, Owusu-Sekyere {This is a special guy} other {Here we can view plenty of member details ;)} }</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/member/member-details/member-details.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="df5c1e0feeb52b31e66d6d3cdc083cc0a75dcbb7" datatype="html">
+        <source>Steckbrief anpassen</source>
+        <target>Modify charachteristics</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/member/member-edit/member-edit.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="074a550816cde9894e6c6d3bafcbc7be199f059b" datatype="html">
+        <source>Nachname</source>
+        <target>Lastname</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/member/member-edit/member-edit.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d6507e7b5ae51f1734f3e169ef4cf6ef56f0001f" datatype="html">
+        <source>Vorname</source>
+        <target>Firstname</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/member/member-edit/member-edit.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="211ca009c14113d760f4f104c83198fd35e4ca23" datatype="html">
+        <source>Angaben sind nicht korrekt</source>
+        <target>Data is incorrect</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/member/member-edit/member-edit.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4d0e464f0608346ec01f28de8a9d2200c3d78035" datatype="html">
+        <source>Speichern</source>
+        <target>Save</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/member/member-edit/member-edit.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">save modifications</note>
+        <note priority="1" from="meaning">button content</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

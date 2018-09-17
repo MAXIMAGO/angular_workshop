@@ -1,6 +1,6 @@
 <mat-card-subtitle>
   {{member.name}}, {{member.firstname}}
 </mat-card-subtitle>
-<mat-card-content *ngIf="!!member">
-  Here we can view plenty of member details ;)
+<mat-card-content *ngIf="!!member" i18n>
+  {member.name, select, Owusu-Sekyere {This is a special guy} other {Here we can view plenty of member details ;)}}
 </mat-card-content>

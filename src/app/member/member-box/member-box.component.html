@@ -1,4 +1,6 @@
 <mat-toolbar color="primary" class="member__header" (click)="onHeaderClick($event)">
   <h2 [thTooltip]="member|json" class="member__title" *ngIf="member">{{member.name}}, {{member.firstname}}</h2>
-  <button mat-button thTooltip="Mitarbeiter bearbeiten" thTooltipDelay="1000" class="member__edit" (click)="onEditClick($event)">edit</button>
+  <button mat-button thTooltip="Mitarbeiter bearbeiten" thTooltipDelay="1000" class="member__edit" (click)="onEditClick($event)"
+    i18n-thTooltip="button tooltip|toolip for editing a member"
+    i18n="button content|edit a member@@member_edit">Bearbeiten</button>
 </mat-toolbar>

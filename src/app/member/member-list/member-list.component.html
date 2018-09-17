@@ -1,3 +1,4 @@
+<mat-card-subtitle i18n>{members.length, plural, =0 {Keine Mitglieder} =1 {Ein Mitglied} =2 {Ein Mitglieder Duo} other {{{members.length}} Mitglieder} }</mat-card-subtitle>
 <button mat-raised-button color="accent" (click)="newMember()">Neues Teammitglied</button>
 <mat-list>
     <th-member-box class="list__item" *ngFor="let member of members" [member]="member" (headerClick)="showMember($event)" (editClick)="editMember($event)"></th-member-box>

@@ -1,11 +1,11 @@
-<mat-card-subtitle>Steckbrief anpassen</mat-card-subtitle>
+<mat-card-subtitle i18n>Steckbrief anpassen</mat-card-subtitle>
 <form class="edit__form" #form="ngForm" (ngSubmit)="save(form)" *ngIf="!!member">
   <mat-form-field>
-    <input matInput placeholder="Nachname" type="text" required minlength="2" [(ngModel)]="member.name" name="lastname" #name="ngModel">
+    <input matInput i18n-placeholder placeholder="Nachname" type="text" required minlength="2" [(ngModel)]="member.name" name="lastname" #name="ngModel">
   </mat-form-field>
   <mat-form-field>
-    <input matInput placeholder="Vorname" type="text" required maxlength=10 [(ngModel)]="member.firstname" name="firstname" #firstname="ngModel">
+    <input matInput i18n-placeholder placeholder="Vorname" type="text" required maxlength=10 [(ngModel)]="member.firstname" name="firstname" #firstname="ngModel">
   </mat-form-field>
-  <mat-error *ngIf="!form.valid">Angaben sind nicht korrekt</mat-error>
-  <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid || !form.dirty">Speichern</button>
+  <mat-error *ngIf="!form.valid" i18n>Angaben sind nicht korrekt</mat-error>
+  <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid || !form.dirty" i18n="button content|save modifications">Speichern</button>
 </form>
